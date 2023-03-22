@@ -16,5 +16,10 @@ namespace Pizzatilaus
         {
             InitializeComponent();
         }
+
+        private void tilaaBT_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

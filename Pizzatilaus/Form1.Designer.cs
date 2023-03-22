@@ -95,6 +95,19 @@
             this.normaaliRB = new System.Windows.Forms.RadioButton();
             this.pieniRB = new System.Windows.Forms.RadioButton();
             this.vahvistaTAB = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.siirryMaksuunBT = new System.Windows.Forms.Button();
+            this.tyhjennaTilausBT = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.kokonaisHintaTB = new System.Windows.Forms.TextBox();
+            this.arvoLisaveroTB = new System.Windows.Forms.TextBox();
+            this.ilmanVeroaTB = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.maksuTAB = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.tabcontrol.SuspendLayout();
@@ -104,6 +117,7 @@
             this.tayteGB.SuspendLayout();
             this.pohjaGB.SuspendLayout();
             this.kokoGB.SuspendLayout();
+            this.vahvistaTAB.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabcontrol
@@ -156,6 +170,7 @@
             this.tilaaBT.TabIndex = 5;
             this.tilaaBT.Text = "Tilaa";
             this.tilaaBT.UseVisualStyleBackColor = true;
+            this.tilaaBT.Click += new System.EventHandler(this.tilaaBT_Click);
             // 
             // lisukeGB
             // 
@@ -872,6 +887,17 @@
             // 
             // vahvistaTAB
             // 
+            this.vahvistaTAB.BackColor = System.Drawing.Color.Wheat;
+            this.vahvistaTAB.Controls.Add(this.label6);
+            this.vahvistaTAB.Controls.Add(this.siirryMaksuunBT);
+            this.vahvistaTAB.Controls.Add(this.tyhjennaTilausBT);
+            this.vahvistaTAB.Controls.Add(this.label5);
+            this.vahvistaTAB.Controls.Add(this.label4);
+            this.vahvistaTAB.Controls.Add(this.label3);
+            this.vahvistaTAB.Controls.Add(this.kokonaisHintaTB);
+            this.vahvistaTAB.Controls.Add(this.arvoLisaveroTB);
+            this.vahvistaTAB.Controls.Add(this.ilmanVeroaTB);
+            this.vahvistaTAB.Controls.Add(this.listView1);
             this.vahvistaTAB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vahvistaTAB.Location = new System.Drawing.Point(4, 33);
             this.vahvistaTAB.Name = "vahvistaTAB";
@@ -879,7 +905,119 @@
             this.vahvistaTAB.Size = new System.Drawing.Size(1129, 470);
             this.vahvistaTAB.TabIndex = 1;
             this.vahvistaTAB.Text = "Vahvista";
-            this.vahvistaTAB.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tempus Sans ITC", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(13, 39);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(180, 24);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Tilauksen vahvistus";
+            // 
+            // siirryMaksuunBT
+            // 
+            this.siirryMaksuunBT.Font = new System.Drawing.Font("Tempus Sans ITC", 15.75F, System.Drawing.FontStyle.Bold);
+            this.siirryMaksuunBT.Location = new System.Drawing.Point(844, 281);
+            this.siirryMaksuunBT.Name = "siirryMaksuunBT";
+            this.siirryMaksuunBT.Size = new System.Drawing.Size(202, 49);
+            this.siirryMaksuunBT.TabIndex = 8;
+            this.siirryMaksuunBT.Text = "Siirry maksuun";
+            this.siirryMaksuunBT.UseVisualStyleBackColor = true;
+            // 
+            // tyhjennaTilausBT
+            // 
+            this.tyhjennaTilausBT.Font = new System.Drawing.Font("Tempus Sans ITC", 15.75F, System.Drawing.FontStyle.Bold);
+            this.tyhjennaTilausBT.Location = new System.Drawing.Point(610, 281);
+            this.tyhjennaTilausBT.Name = "tyhjennaTilausBT";
+            this.tyhjennaTilausBT.Size = new System.Drawing.Size(225, 49);
+            this.tyhjennaTilausBT.TabIndex = 7;
+            this.tyhjennaTilausBT.Text = "Tyhjennä tilaus";
+            this.tyhjennaTilausBT.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tempus Sans ITC", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(606, 213);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(144, 24);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Kokonaishinta:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tempus Sans ITC", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(606, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 24);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Arvolisävero:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tempus Sans ITC", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(606, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(178, 24);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Hinta ilman veroa:";
+            // 
+            // kokonaisHintaTB
+            // 
+            this.kokonaisHintaTB.BackColor = System.Drawing.Color.OldLace;
+            this.kokonaisHintaTB.Location = new System.Drawing.Point(851, 213);
+            this.kokonaisHintaTB.Name = "kokonaisHintaTB";
+            this.kokonaisHintaTB.Size = new System.Drawing.Size(195, 29);
+            this.kokonaisHintaTB.TabIndex = 3;
+            // 
+            // arvoLisaveroTB
+            // 
+            this.arvoLisaveroTB.BackColor = System.Drawing.Color.OldLace;
+            this.arvoLisaveroTB.Location = new System.Drawing.Point(851, 147);
+            this.arvoLisaveroTB.Name = "arvoLisaveroTB";
+            this.arvoLisaveroTB.Size = new System.Drawing.Size(195, 29);
+            this.arvoLisaveroTB.TabIndex = 2;
+            // 
+            // ilmanVeroaTB
+            // 
+            this.ilmanVeroaTB.BackColor = System.Drawing.Color.OldLace;
+            this.ilmanVeroaTB.Location = new System.Drawing.Point(851, 78);
+            this.ilmanVeroaTB.Name = "ilmanVeroaTB";
+            this.ilmanVeroaTB.Size = new System.Drawing.Size(195, 29);
+            this.ilmanVeroaTB.TabIndex = 1;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(17, 75);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(551, 378);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tuotteet";
+            this.columnHeader1.Width = 322;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Määrä";
+            this.columnHeader2.Width = 122;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Hinta";
+            this.columnHeader3.Width = 417;
             // 
             // maksuTAB
             // 
@@ -925,6 +1063,8 @@
             this.pohjaGB.PerformLayout();
             this.kokoGB.ResumeLayout(false);
             this.kokoGB.PerformLayout();
+            this.vahvistaTAB.ResumeLayout(false);
+            this.vahvistaTAB.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1001,6 +1141,19 @@
         private System.Windows.Forms.CheckBox jauhelihaCB;
         private System.Windows.Forms.CheckBox kinkkuCB;
         private System.Windows.Forms.CheckBox pepperoniCB;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button siirryMaksuunBT;
+        private System.Windows.Forms.Button tyhjennaTilausBT;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox kokonaisHintaTB;
+        private System.Windows.Forms.TextBox arvoLisaveroTB;
+        private System.Windows.Forms.TextBox ilmanVeroaTB;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
 
