@@ -309,6 +309,7 @@
             this.spritezeroCB.TabIndex = 3;
             this.spritezeroCB.Text = "Sprite Zero";
             this.spritezeroCB.UseVisualStyleBackColor = true;
+            this.spritezeroCB.CheckedChanged += new System.EventHandler(this.spritezeroCB_CheckedChanged);
             // 
             // vichyTB
             // 
@@ -328,6 +329,7 @@
             this.spriteCB.TabIndex = 2;
             this.spriteCB.Text = "Sprite";
             this.spriteCB.UseVisualStyleBackColor = true;
+            this.spriteCB.CheckedChanged += new System.EventHandler(this.spriteCB_CheckedChanged);
             // 
             // spritezeroTB
             // 
@@ -413,6 +415,7 @@
             this.vichyCB.TabIndex = 8;
             this.vichyCB.Text = "Vichy";
             this.vichyCB.UseVisualStyleBackColor = true;
+            this.vichyCB.CheckedChanged += new System.EventHandler(this.vichyCB_CheckedChanged);
             // 
             // drpepperzeroCB
             // 
@@ -424,6 +427,7 @@
             this.drpepperzeroCB.TabIndex = 7;
             this.drpepperzeroCB.Text = "Dr. Pepper Zero";
             this.drpepperzeroCB.UseVisualStyleBackColor = true;
+            this.drpepperzeroCB.CheckedChanged += new System.EventHandler(this.drpepperzeroCB_CheckedChanged);
             // 
             // drpepperCB
             // 
@@ -435,6 +439,7 @@
             this.drpepperCB.TabIndex = 6;
             this.drpepperCB.Text = "Dr. Pepper";
             this.drpepperCB.UseVisualStyleBackColor = true;
+            this.drpepperCB.CheckedChanged += new System.EventHandler(this.drpepperCB_CheckedChanged);
             // 
             // fantazeroCB
             // 
@@ -446,6 +451,7 @@
             this.fantazeroCB.TabIndex = 5;
             this.fantazeroCB.Text = "Fanta Zero";
             this.fantazeroCB.UseVisualStyleBackColor = true;
+            this.fantazeroCB.CheckedChanged += new System.EventHandler(this.fantazeroCB_CheckedChanged);
             // 
             // fantaCB
             // 
@@ -457,6 +463,7 @@
             this.fantaCB.TabIndex = 4;
             this.fantaCB.Text = "Fanta";
             this.fantaCB.UseVisualStyleBackColor = true;
+            this.fantaCB.CheckedChanged += new System.EventHandler(this.fantaCB_CheckedChanged);
             // 
             // cocacolazeroCB
             // 
@@ -468,6 +475,7 @@
             this.cocacolazeroCB.TabIndex = 1;
             this.cocacolazeroCB.Text = "Coca-Cola Zero";
             this.cocacolazeroCB.UseVisualStyleBackColor = true;
+            this.cocacolazeroCB.CheckedChanged += new System.EventHandler(this.cocacolazeroCB_CheckedChanged);
             // 
             // cocacolaCB
             // 

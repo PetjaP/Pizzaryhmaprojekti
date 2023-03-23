@@ -542,5 +542,93 @@ namespace Pizzatilaus
                 }
             }
         }
+
+        private void cocacolazeroCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cocacolazeroCB.Checked)
+            {
+                if (cocacolazeroTB.Text == "")
+                {
+                    cocacolazeroTB.Text = "1";
+                }
+            }
+        }
+
+        private void drpepperCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if(drpepperCB.Checked)
+            {
+                if (drpepperTB.Text == "")
+                {
+                    drpepperTB.Text = "1";
+                }
+            }
+        }
+
+        private void drpepperzeroCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if(drpepperzeroCB.Checked)
+            {
+                if (drpepperzeroTB.Text == "")
+                {
+                    drpepperzeroTB.Text = "1";
+                }
+            }
+        }
+
+        private void fantaCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if(fantaCB.Checked)
+            {
+                if (fantaTB.Text == "")
+                {
+                    fantaTB.Text = "1";
+                }
+            }
+        }
+
+        private void fantazeroCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if(fantazeroCB.Checked)
+            {
+                if (fantazeroTB.Text == "")
+                {
+                    fantazeroTB.Text = "1";
+                }
+            }
+        }
+
+        private void spriteCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if(spriteCB.Checked)
+            {
+                if (spriteTB.Text == "")
+                {
+                    spriteTB.Text = "1";
+                }
+            }
+        }
+
+        private void spritezeroCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if(spritezeroCB.Checked)
+            {
+                if (spritezeroTB.Text == "")
+                {
+                    spritezeroTB.Text = "1";
+                }
+            }
+        }
+
+        private void vichyCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if(vichyCB.Checked)
+            {
+                if (vichyTB.Text == "")
+                {
+                    vichyTB.Text = "1";
+                }
+            }
+        }
     }
 }
