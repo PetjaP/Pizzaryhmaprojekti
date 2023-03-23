@@ -28,37 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabcontrol = new System.Windows.Forms.TabControl();
             this.tilausTAB = new System.Windows.Forms.TabPage();
             this.tyhjennaBT = new System.Windows.Forms.Button();
             this.tilaaBT = new System.Windows.Forms.Button();
             this.lisukeGB = new System.Windows.Forms.GroupBox();
-            this.bbqdipCB = new System.Windows.Forms.CheckBox();
-            this.vsipulidipCB = new System.Windows.Forms.CheckBox();
-            this.patonkiCB = new System.Windows.Forms.CheckBox();
+            this.bbqdippiCB = new System.Windows.Forms.CheckBox();
+            this.valkosipulidippiCB = new System.Windows.Forms.CheckBox();
+            this.yrttivoipatonkiCB = new System.Windows.Forms.CheckBox();
             this.chiliranskalaisetCB = new System.Windows.Forms.CheckBox();
             this.ranskalaisetCB = new System.Windows.Forms.CheckBox();
             this.sipulirenkaatCB = new System.Windows.Forms.CheckBox();
-            this.wingsCB = new System.Windows.Forms.CheckBox();
+            this.hotwingsCB = new System.Windows.Forms.CheckBox();
             this.juomaGB = new System.Windows.Forms.GroupBox();
             this.spritezeroCB = new System.Windows.Forms.CheckBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.Sprite = new System.Windows.Forms.CheckBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.vichyTB = new System.Windows.Forms.TextBox();
+            this.spriteCB = new System.Windows.Forms.CheckBox();
+            this.spritezeroTB = new System.Windows.Forms.TextBox();
+            this.spriteTB = new System.Windows.Forms.TextBox();
+            this.fantazeroTB = new System.Windows.Forms.TextBox();
+            this.fantaTB = new System.Windows.Forms.TextBox();
+            this.drpepperzeroTB = new System.Windows.Forms.TextBox();
+            this.drpepperTB = new System.Windows.Forms.TextBox();
+            this.cocacolazeroTB = new System.Windows.Forms.TextBox();
+            this.cocacolaTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.vichyCB = new System.Windows.Forms.CheckBox();
-            this.pepperzeroCB = new System.Windows.Forms.CheckBox();
+            this.drpepperzeroCB = new System.Windows.Forms.CheckBox();
             this.drpepperCB = new System.Windows.Forms.CheckBox();
             this.fantazeroCB = new System.Windows.Forms.CheckBox();
             this.fantaCB = new System.Windows.Forms.CheckBox();
-            this.cokezeroCB = new System.Windows.Forms.CheckBox();
+            this.cocacolazeroCB = new System.Windows.Forms.CheckBox();
             this.cocacolaCB = new System.Windows.Forms.CheckBox();
             this.tayteGB = new System.Windows.Forms.GroupBox();
             this.maustekurkkuCB = new System.Windows.Forms.CheckBox();
@@ -110,6 +111,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.maksuTAB = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabcontrol.SuspendLayout();
             this.tilausTAB.SuspendLayout();
             this.lisukeGB.SuspendLayout();
@@ -118,6 +120,7 @@
             this.pohjaGB.SuspendLayout();
             this.kokoGB.SuspendLayout();
             this.vahvistaTAB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabcontrol
@@ -174,13 +177,13 @@
             // 
             // lisukeGB
             // 
-            this.lisukeGB.Controls.Add(this.bbqdipCB);
-            this.lisukeGB.Controls.Add(this.vsipulidipCB);
-            this.lisukeGB.Controls.Add(this.patonkiCB);
+            this.lisukeGB.Controls.Add(this.bbqdippiCB);
+            this.lisukeGB.Controls.Add(this.valkosipulidippiCB);
+            this.lisukeGB.Controls.Add(this.yrttivoipatonkiCB);
             this.lisukeGB.Controls.Add(this.chiliranskalaisetCB);
             this.lisukeGB.Controls.Add(this.ranskalaisetCB);
             this.lisukeGB.Controls.Add(this.sipulirenkaatCB);
-            this.lisukeGB.Controls.Add(this.wingsCB);
+            this.lisukeGB.Controls.Add(this.hotwingsCB);
             this.lisukeGB.Font = new System.Drawing.Font("Tempus Sans ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lisukeGB.Location = new System.Drawing.Point(850, 6);
             this.lisukeGB.Name = "lisukeGB";
@@ -189,38 +192,38 @@
             this.lisukeGB.TabStop = false;
             this.lisukeGB.Text = "Valitse lisukkeet: (2,50€/kpl)";
             // 
-            // bbqdipCB
+            // bbqdippiCB
             // 
-            this.bbqdipCB.AutoSize = true;
-            this.bbqdipCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bbqdipCB.Location = new System.Drawing.Point(16, 285);
-            this.bbqdipCB.Name = "bbqdipCB";
-            this.bbqdipCB.Size = new System.Drawing.Size(110, 24);
-            this.bbqdipCB.TabIndex = 6;
-            this.bbqdipCB.Text = "BBQ-Dippi";
-            this.bbqdipCB.UseVisualStyleBackColor = true;
+            this.bbqdippiCB.AutoSize = true;
+            this.bbqdippiCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bbqdippiCB.Location = new System.Drawing.Point(16, 285);
+            this.bbqdippiCB.Name = "bbqdippiCB";
+            this.bbqdippiCB.Size = new System.Drawing.Size(110, 24);
+            this.bbqdippiCB.TabIndex = 6;
+            this.bbqdippiCB.Text = "BBQ-Dippi";
+            this.bbqdippiCB.UseVisualStyleBackColor = true;
             // 
-            // vsipulidipCB
+            // valkosipulidippiCB
             // 
-            this.vsipulidipCB.AutoSize = true;
-            this.vsipulidipCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vsipulidipCB.Location = new System.Drawing.Point(16, 249);
-            this.vsipulidipCB.Name = "vsipulidipCB";
-            this.vsipulidipCB.Size = new System.Drawing.Size(157, 24);
-            this.vsipulidipCB.TabIndex = 5;
-            this.vsipulidipCB.Text = "Valkosipuli Dippi";
-            this.vsipulidipCB.UseVisualStyleBackColor = true;
+            this.valkosipulidippiCB.AutoSize = true;
+            this.valkosipulidippiCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valkosipulidippiCB.Location = new System.Drawing.Point(16, 249);
+            this.valkosipulidippiCB.Name = "valkosipulidippiCB";
+            this.valkosipulidippiCB.Size = new System.Drawing.Size(157, 24);
+            this.valkosipulidippiCB.TabIndex = 5;
+            this.valkosipulidippiCB.Text = "Valkosipuli Dippi";
+            this.valkosipulidippiCB.UseVisualStyleBackColor = true;
             // 
-            // patonkiCB
+            // yrttivoipatonkiCB
             // 
-            this.patonkiCB.AutoSize = true;
-            this.patonkiCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patonkiCB.Location = new System.Drawing.Point(16, 213);
-            this.patonkiCB.Name = "patonkiCB";
-            this.patonkiCB.Size = new System.Drawing.Size(150, 24);
-            this.patonkiCB.TabIndex = 4;
-            this.patonkiCB.Text = "Yrttivoi Patonki";
-            this.patonkiCB.UseVisualStyleBackColor = true;
+            this.yrttivoipatonkiCB.AutoSize = true;
+            this.yrttivoipatonkiCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yrttivoipatonkiCB.Location = new System.Drawing.Point(16, 213);
+            this.yrttivoipatonkiCB.Name = "yrttivoipatonkiCB";
+            this.yrttivoipatonkiCB.Size = new System.Drawing.Size(150, 24);
+            this.yrttivoipatonkiCB.TabIndex = 4;
+            this.yrttivoipatonkiCB.Text = "Yrttivoi Patonki";
+            this.yrttivoipatonkiCB.UseVisualStyleBackColor = true;
             // 
             // chiliranskalaisetCB
             // 
@@ -255,37 +258,37 @@
             this.sipulirenkaatCB.Text = "Sipulirenkaat";
             this.sipulirenkaatCB.UseVisualStyleBackColor = true;
             // 
-            // wingsCB
+            // hotwingsCB
             // 
-            this.wingsCB.AutoSize = true;
-            this.wingsCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wingsCB.Location = new System.Drawing.Point(16, 71);
-            this.wingsCB.Name = "wingsCB";
-            this.wingsCB.Size = new System.Drawing.Size(110, 24);
-            this.wingsCB.TabIndex = 0;
-            this.wingsCB.Text = "Hot Wings";
-            this.wingsCB.UseVisualStyleBackColor = true;
+            this.hotwingsCB.AutoSize = true;
+            this.hotwingsCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hotwingsCB.Location = new System.Drawing.Point(16, 71);
+            this.hotwingsCB.Name = "hotwingsCB";
+            this.hotwingsCB.Size = new System.Drawing.Size(110, 24);
+            this.hotwingsCB.TabIndex = 0;
+            this.hotwingsCB.Text = "Hot Wings";
+            this.hotwingsCB.UseVisualStyleBackColor = true;
             // 
             // juomaGB
             // 
             this.juomaGB.Controls.Add(this.spritezeroCB);
-            this.juomaGB.Controls.Add(this.textBox9);
-            this.juomaGB.Controls.Add(this.Sprite);
-            this.juomaGB.Controls.Add(this.textBox8);
-            this.juomaGB.Controls.Add(this.textBox7);
-            this.juomaGB.Controls.Add(this.textBox6);
-            this.juomaGB.Controls.Add(this.textBox5);
-            this.juomaGB.Controls.Add(this.textBox4);
-            this.juomaGB.Controls.Add(this.textBox3);
-            this.juomaGB.Controls.Add(this.textBox2);
-            this.juomaGB.Controls.Add(this.textBox1);
+            this.juomaGB.Controls.Add(this.vichyTB);
+            this.juomaGB.Controls.Add(this.spriteCB);
+            this.juomaGB.Controls.Add(this.spritezeroTB);
+            this.juomaGB.Controls.Add(this.spriteTB);
+            this.juomaGB.Controls.Add(this.fantazeroTB);
+            this.juomaGB.Controls.Add(this.fantaTB);
+            this.juomaGB.Controls.Add(this.drpepperzeroTB);
+            this.juomaGB.Controls.Add(this.drpepperTB);
+            this.juomaGB.Controls.Add(this.cocacolazeroTB);
+            this.juomaGB.Controls.Add(this.cocacolaTB);
             this.juomaGB.Controls.Add(this.label2);
             this.juomaGB.Controls.Add(this.vichyCB);
-            this.juomaGB.Controls.Add(this.pepperzeroCB);
+            this.juomaGB.Controls.Add(this.drpepperzeroCB);
             this.juomaGB.Controls.Add(this.drpepperCB);
             this.juomaGB.Controls.Add(this.fantazeroCB);
             this.juomaGB.Controls.Add(this.fantaCB);
-            this.juomaGB.Controls.Add(this.cokezeroCB);
+            this.juomaGB.Controls.Add(this.cocacolazeroCB);
             this.juomaGB.Controls.Add(this.cocacolaCB);
             this.juomaGB.Font = new System.Drawing.Font("Tempus Sans ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.juomaGB.Location = new System.Drawing.Point(555, 6);
@@ -306,88 +309,88 @@
             this.spritezeroCB.Text = "Sprite Zero";
             this.spritezeroCB.UseVisualStyleBackColor = true;
             // 
-            // textBox9
+            // vichyTB
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(212, 357);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(49, 22);
-            this.textBox9.TabIndex = 18;
+            this.vichyTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vichyTB.Location = new System.Drawing.Point(212, 357);
+            this.vichyTB.Name = "vichyTB";
+            this.vichyTB.Size = new System.Drawing.Size(49, 22);
+            this.vichyTB.TabIndex = 18;
             // 
-            // Sprite
+            // spriteCB
             // 
-            this.Sprite.AutoSize = true;
-            this.Sprite.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sprite.Location = new System.Drawing.Point(6, 285);
-            this.Sprite.Name = "Sprite";
-            this.Sprite.Size = new System.Drawing.Size(71, 24);
-            this.Sprite.TabIndex = 2;
-            this.Sprite.Text = "Sprite";
-            this.Sprite.UseVisualStyleBackColor = true;
+            this.spriteCB.AutoSize = true;
+            this.spriteCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spriteCB.Location = new System.Drawing.Point(6, 285);
+            this.spriteCB.Name = "spriteCB";
+            this.spriteCB.Size = new System.Drawing.Size(71, 24);
+            this.spriteCB.TabIndex = 2;
+            this.spriteCB.Text = "Sprite";
+            this.spriteCB.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // spritezeroTB
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(212, 321);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(49, 22);
-            this.textBox8.TabIndex = 17;
+            this.spritezeroTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spritezeroTB.Location = new System.Drawing.Point(212, 321);
+            this.spritezeroTB.Name = "spritezeroTB";
+            this.spritezeroTB.Size = new System.Drawing.Size(49, 22);
+            this.spritezeroTB.TabIndex = 17;
             // 
-            // textBox7
+            // spriteTB
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(212, 285);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(49, 22);
-            this.textBox7.TabIndex = 16;
+            this.spriteTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spriteTB.Location = new System.Drawing.Point(212, 285);
+            this.spriteTB.Name = "spriteTB";
+            this.spriteTB.Size = new System.Drawing.Size(49, 22);
+            this.spriteTB.TabIndex = 16;
             // 
-            // textBox6
+            // fantazeroTB
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(212, 249);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(49, 22);
-            this.textBox6.TabIndex = 15;
+            this.fantazeroTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fantazeroTB.Location = new System.Drawing.Point(212, 249);
+            this.fantazeroTB.Name = "fantazeroTB";
+            this.fantazeroTB.Size = new System.Drawing.Size(49, 22);
+            this.fantazeroTB.TabIndex = 15;
             // 
-            // textBox5
+            // fantaTB
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(212, 213);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(49, 22);
-            this.textBox5.TabIndex = 14;
+            this.fantaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fantaTB.Location = new System.Drawing.Point(212, 213);
+            this.fantaTB.Name = "fantaTB";
+            this.fantaTB.Size = new System.Drawing.Size(49, 22);
+            this.fantaTB.TabIndex = 14;
             // 
-            // textBox4
+            // drpepperzeroTB
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(212, 177);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(49, 22);
-            this.textBox4.TabIndex = 13;
+            this.drpepperzeroTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drpepperzeroTB.Location = new System.Drawing.Point(212, 177);
+            this.drpepperzeroTB.Name = "drpepperzeroTB";
+            this.drpepperzeroTB.Size = new System.Drawing.Size(49, 22);
+            this.drpepperzeroTB.TabIndex = 13;
             // 
-            // textBox3
+            // drpepperTB
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(212, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(49, 22);
-            this.textBox3.TabIndex = 12;
+            this.drpepperTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drpepperTB.Location = new System.Drawing.Point(212, 141);
+            this.drpepperTB.Name = "drpepperTB";
+            this.drpepperTB.Size = new System.Drawing.Size(49, 22);
+            this.drpepperTB.TabIndex = 12;
             // 
-            // textBox2
+            // cocacolazeroTB
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(212, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(49, 22);
-            this.textBox2.TabIndex = 11;
+            this.cocacolazeroTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cocacolazeroTB.Location = new System.Drawing.Point(212, 105);
+            this.cocacolazeroTB.Name = "cocacolazeroTB";
+            this.cocacolazeroTB.Size = new System.Drawing.Size(49, 22);
+            this.cocacolazeroTB.TabIndex = 11;
             // 
-            // textBox1
+            // cocacolaTB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(212, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(49, 22);
-            this.textBox1.TabIndex = 10;
+            this.cocacolaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cocacolaTB.Location = new System.Drawing.Point(212, 69);
+            this.cocacolaTB.Name = "cocacolaTB";
+            this.cocacolaTB.Size = new System.Drawing.Size(49, 22);
+            this.cocacolaTB.TabIndex = 10;
             // 
             // label2
             // 
@@ -410,16 +413,16 @@
             this.vichyCB.Text = "Vichy";
             this.vichyCB.UseVisualStyleBackColor = true;
             // 
-            // pepperzeroCB
+            // drpepperzeroCB
             // 
-            this.pepperzeroCB.AutoSize = true;
-            this.pepperzeroCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pepperzeroCB.Location = new System.Drawing.Point(6, 177);
-            this.pepperzeroCB.Name = "pepperzeroCB";
-            this.pepperzeroCB.Size = new System.Drawing.Size(146, 24);
-            this.pepperzeroCB.TabIndex = 7;
-            this.pepperzeroCB.Text = "Dr. Pepper Zero";
-            this.pepperzeroCB.UseVisualStyleBackColor = true;
+            this.drpepperzeroCB.AutoSize = true;
+            this.drpepperzeroCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drpepperzeroCB.Location = new System.Drawing.Point(6, 177);
+            this.drpepperzeroCB.Name = "drpepperzeroCB";
+            this.drpepperzeroCB.Size = new System.Drawing.Size(146, 24);
+            this.drpepperzeroCB.TabIndex = 7;
+            this.drpepperzeroCB.Text = "Dr. Pepper Zero";
+            this.drpepperzeroCB.UseVisualStyleBackColor = true;
             // 
             // drpepperCB
             // 
@@ -454,16 +457,16 @@
             this.fantaCB.Text = "Fanta";
             this.fantaCB.UseVisualStyleBackColor = true;
             // 
-            // cokezeroCB
+            // cocacolazeroCB
             // 
-            this.cokezeroCB.AutoSize = true;
-            this.cokezeroCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cokezeroCB.Location = new System.Drawing.Point(6, 105);
-            this.cokezeroCB.Name = "cokezeroCB";
-            this.cokezeroCB.Size = new System.Drawing.Size(148, 24);
-            this.cokezeroCB.TabIndex = 1;
-            this.cokezeroCB.Text = "Coca-Cola Zero";
-            this.cokezeroCB.UseVisualStyleBackColor = true;
+            this.cocacolazeroCB.AutoSize = true;
+            this.cocacolazeroCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cocacolazeroCB.Location = new System.Drawing.Point(6, 105);
+            this.cocacolazeroCB.Name = "cocacolazeroCB";
+            this.cocacolazeroCB.Size = new System.Drawing.Size(148, 24);
+            this.cocacolazeroCB.TabIndex = 1;
+            this.cocacolazeroCB.Text = "Coca-Cola Zero";
+            this.cocacolazeroCB.UseVisualStyleBackColor = true;
             // 
             // cocacolaCB
             // 
@@ -1040,12 +1043,23 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "PIZZA PALVELU";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(640, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(96, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(1161, 681);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabcontrol);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1065,6 +1079,7 @@
             this.kokoGB.PerformLayout();
             this.vahvistaTAB.ResumeLayout(false);
             this.vahvistaTAB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1091,31 +1106,31 @@
         private System.Windows.Forms.RadioButton normaaliRB;
         private System.Windows.Forms.RadioButton pieniRB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox bbqdipCB;
-        private System.Windows.Forms.CheckBox vsipulidipCB;
-        private System.Windows.Forms.CheckBox patonkiCB;
+        private System.Windows.Forms.CheckBox bbqdippiCB;
+        private System.Windows.Forms.CheckBox valkosipulidippiCB;
+        private System.Windows.Forms.CheckBox yrttivoipatonkiCB;
         private System.Windows.Forms.CheckBox chiliranskalaisetCB;
         private System.Windows.Forms.CheckBox ranskalaisetCB;
         private System.Windows.Forms.CheckBox sipulirenkaatCB;
-        private System.Windows.Forms.CheckBox wingsCB;
+        private System.Windows.Forms.CheckBox hotwingsCB;
         private System.Windows.Forms.CheckBox spritezeroCB;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.CheckBox Sprite;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox vichyTB;
+        private System.Windows.Forms.CheckBox spriteCB;
+        private System.Windows.Forms.TextBox spritezeroTB;
+        private System.Windows.Forms.TextBox spriteTB;
+        private System.Windows.Forms.TextBox fantazeroTB;
+        private System.Windows.Forms.TextBox fantaTB;
+        private System.Windows.Forms.TextBox drpepperzeroTB;
+        private System.Windows.Forms.TextBox drpepperTB;
+        private System.Windows.Forms.TextBox cocacolazeroTB;
+        private System.Windows.Forms.TextBox cocacolaTB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox vichyCB;
-        private System.Windows.Forms.CheckBox pepperzeroCB;
+        private System.Windows.Forms.CheckBox drpepperzeroCB;
         private System.Windows.Forms.CheckBox drpepperCB;
         private System.Windows.Forms.CheckBox fantazeroCB;
         private System.Windows.Forms.CheckBox fantaCB;
-        private System.Windows.Forms.CheckBox cokezeroCB;
+        private System.Windows.Forms.CheckBox cocacolazeroCB;
         private System.Windows.Forms.CheckBox cocacolaCB;
         private System.Windows.Forms.CheckBox maustekurkkuCB;
         private System.Windows.Forms.CheckBox kaprisCB;
@@ -1154,6 +1169,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
