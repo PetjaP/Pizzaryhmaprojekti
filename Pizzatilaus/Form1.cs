@@ -18,6 +18,11 @@ namespace Pizzatilaus
         {
             InitializeComponent();
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            vehnaRB.Checked = true;
+            pieniRB.Checked = true;
+        }
 
         private void tilaaBT_Click(object sender, EventArgs e)
         // Pizzan koko ja pohja valinta
@@ -121,361 +126,421 @@ namespace Pizzatilaus
             // Täytteiden valinta
             if(aurajuustoCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Aurajuusto");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Aurajuusto");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(bbqCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("BBQ-soosi");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("BBQ-soosi");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(fetaCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Fetajuusto");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Fetajuusto");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(herkkusieniCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Herkkusieni");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Herkkusieni");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(jalapenoCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Jalapeno");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Jalapeno");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(jauhelihaCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Jauheliha");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Jauheliha");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(kanaCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Kana");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Kana");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(kaprisCB.Checked == true) 
             {
-                ListViewItem tayte = new ListViewItem("Kapris");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Kapris");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(KatkarapuCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Katkarapu");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Katkarapu");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(kebabCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Kebab");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Kebab");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(kinkkuCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Kinkku");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Kinkku");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(maustekurkkuCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Maustekurkku");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Maustekurkku");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(mozzarellaCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Mozzarella");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Mozzarella");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(oliiviCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Oliivi");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Oliivi");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(paprikaCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Paprika");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Paprika");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(pekoniCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Pekoni");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Pekoni");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(pepperoniCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Pepperoni");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Pepperoni");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(punasipuliCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Punasipuli");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Punasipuli");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(salamiCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Salami");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Salami");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(smetanaCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Smetana");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Smetana");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(tomaattiCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Tomaati");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Tomaati");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(tonnikalaCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Tonnikala");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Tonnikala");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(tuplajuustoCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Tuplajuusto");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Tuplajuusto");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             if(valkosipuliCB.Checked == true)
             {
-                ListViewItem tayte = new ListViewItem("Valkosipuli");
-                tayte.SubItems.Add("");
-                tayte.SubItems.Add("1,0");
-                listView1.Items.Add(tayte);
+                ListViewItem tuote = new ListViewItem("Valkosipuli");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("1,0");
+                listView1.Items.Add(tuote);
             }
             //Juomien valinta
-            if(cocacolaCB.Checked == true)
+            try
             {
-                ListViewItem juoma = new ListViewItem("Coca-Cola");
-                juoma.SubItems.Add(cocacolaTB.Text);
-                int kpl = Convert.ToInt32(cocacolaTB.Text);
-                double hinta = kpl * 2.0;
-                string kokohinta = hinta.ToString();
-                juoma.SubItems.Add(kokohinta);
-                listView1.Items.Add(juoma);
+                if (cocacolaCB.Checked == true)
+                {                     
+                    ListViewItem tuote = new ListViewItem("Coca-Cola");
+                    tuote.SubItems.Add(cocacolaTB.Text);
+                    int kpl = Convert.ToInt32(cocacolaTB.Text);
+                    double hinta = kpl * 2.0;
+                    string kokohinta = hinta.ToString();
+                    tuote.SubItems.Add(kokohinta);
+                    listView1.Items.Add(tuote);
+                    
+                }
+                else
+                {
+                    cocacolaTB.Text = "";
+                }
+                if (cocacolazeroCB.Checked == true)
+                {
+                    ListViewItem tuote = new ListViewItem("Coca-Cola Zero");
+                    tuote.SubItems.Add(cocacolazeroTB.Text);
+                    int kpl = Convert.ToInt32(cocacolazeroTB.Text);
+                    double hinta = kpl * 2.00;
+                    string kokohinta = hinta.ToString();
+                    tuote.SubItems.Add(kokohinta);
+                    listView1.Items.Add(tuote);
+
+                }
+                else
+                {
+                    cocacolazeroTB.Text = "";
+                }
+                if (drpepperCB.Checked == true)
+                {
+                    ListViewItem tuote = new ListViewItem("Dr.Pepper");
+                    tuote.SubItems.Add(drpepperTB.Text);
+                    int kpl = Convert.ToInt32(drpepperTB.Text);
+                    double hinta = kpl * 2.00;
+                    string kokohinta = hinta.ToString();
+                    tuote.SubItems.Add(kokohinta);
+                    listView1.Items.Add(tuote);
+
+                }
+                else
+                {
+                    drpepperTB.Text = "";
+                }
+                if (drpepperzeroCB.Checked == true)
+                {
+                    ListViewItem tuote = new ListViewItem("Dr.Pepper Zero");
+                    tuote.SubItems.Add(drpepperzeroTB.Text);
+                    int kpl = Convert.ToInt32(drpepperzeroTB.Text);
+                    double hinta = kpl * 2.00;
+                    string kokohinta = hinta.ToString();
+                    tuote.SubItems.Add(kokohinta);
+                    listView1.Items.Add(tuote);
+
+                }
+                else
+                {
+                    drpepperzeroTB.Text = "";
+                }
+                if (fantaCB.Checked == true)
+                {
+                    ListViewItem tuote = new ListViewItem("Fanta");
+                    tuote.SubItems.Add(fantaTB.Text);
+                    int kpl = Convert.ToInt32(fantaTB.Text);
+                    double hinta = kpl * 2.00;
+                    string kokohinta = hinta.ToString();
+                    tuote.SubItems.Add(kokohinta);
+                    listView1.Items.Add(tuote);
+
+                }
+                else
+                {
+                    fantaTB.Text = "";
+                }
+                if (fantazeroCB.Checked == true)
+                {
+                    ListViewItem tuote = new ListViewItem("Fanta Zero");
+                    tuote.SubItems.Add(fantazeroTB.Text);
+                    int kpl = Convert.ToInt32(fantazeroTB.Text);
+                    double hinta = kpl * 2.00;
+                    string kokohinta = hinta.ToString();
+                    tuote.SubItems.Add(kokohinta);
+                    listView1.Items.Add(tuote);
+
+                }
+                else
+                {
+                    fantazeroTB.Text = "";
+                }
+                if (spriteCB.Checked == true)
+                {
+                    ListViewItem tuote = new ListViewItem("Sprite");
+                    tuote.SubItems.Add(spriteTB.Text);
+                    int kpl = Convert.ToInt32(spriteTB.Text);
+                    double hinta = kpl * 2.00;
+                    string kokohinta = hinta.ToString();
+                    tuote.SubItems.Add(kokohinta);
+                    listView1.Items.Add(tuote);
+
+                }
+                else
+                {
+                    spriteTB.Text = "";
+                }
+                if (spritezeroCB.Checked == true)
+                {
+                    ListViewItem tuote = new ListViewItem("Sprite Zero");
+                    tuote.SubItems.Add(spritezeroTB.Text);
+                    int kpl = Convert.ToInt32(spritezeroTB.Text);
+                    double hinta = kpl * 2.00;
+                    string kokohinta = hinta.ToString();
+                    tuote.SubItems.Add(kokohinta);
+                    listView1.Items.Add(tuote);
+
+                }
+                else
+                {
+                    spritezeroTB.Text = "";
+                }
+                if (vichyCB.Checked == true)
+                {
+                    ListViewItem tuote = new ListViewItem("Vichy");
+                    tuote.SubItems.Add(vichyTB.Text);
+                    int kpl = Convert.ToInt32(vichyTB.Text);
+                    double hinta = kpl * 2.00;
+                    string kokohinta = hinta.ToString();
+                    tuote.SubItems.Add(kokohinta);
+                    listView1.Items.Add(tuote);
+
+
+                }
+
+                else
+                {
+                    vichyTB.Text = "";
+                }
 
             }
-            else
+            catch
             {
-                cocacolaTB.Text = "";
-            }
-            if (cocacolazeroCB.Checked == true)
-            {
-                ListViewItem juoma = new ListViewItem("Coca-Cola Zero");
-                juoma.SubItems.Add(cocacolazeroTB.Text);
-                int kpl = Convert.ToInt32(cocacolazeroTB.Text);
-                double hinta = kpl * 2.00;
-                string kokohinta = hinta.ToString();
-                juoma.SubItems.Add(kokohinta);
-                listView1.Items.Add(juoma);
-
-            }
-            else
-            {
-                cocacolazeroTB.Text = "";
-            }
-            if (drpepperCB.Checked == true)
-            {
-                ListViewItem juoma = new ListViewItem("Dr.Pepper");
-                juoma.SubItems.Add(drpepperTB.Text);
-                int kpl = Convert.ToInt32(drpepperTB.Text);
-                double hinta = kpl * 2.00;
-                string kokohinta = hinta.ToString();
-                juoma.SubItems.Add(kokohinta);
-                listView1.Items.Add(juoma);
-
-            }
-            else
-            {
-                drpepperTB.Text = "";
-            }
-            if (drpepperzeroCB.Checked == true)
-            {
-                ListViewItem juoma = new ListViewItem("Dr.Pepper Zero");
-                juoma.SubItems.Add(drpepperzeroTB.Text);
-                int kpl = Convert.ToInt32(drpepperzeroTB.Text);
-                double hinta = kpl * 2.00;
-                string kokohinta = hinta.ToString();
-                juoma.SubItems.Add(kokohinta);
-                listView1.Items.Add(juoma);
-
-            }
-            else
-            {
-                drpepperzeroTB.Text = "";
-            }
-            if (fantaCB.Checked == true)
-            {
-                ListViewItem juoma = new ListViewItem("Fanta");
-                juoma.SubItems.Add(fantaTB.Text);
-                int kpl = Convert.ToInt32(fantaTB.Text);
-                double hinta = kpl * 2.00;
-                string kokohinta = hinta.ToString();
-                juoma.SubItems.Add(kokohinta);
-                listView1.Items.Add(juoma);
-
-            }
-            else
-            {
-                fantaTB.Text = "";
-            }
-            if (fantazeroCB.Checked == true)
-            {
-                ListViewItem juoma = new ListViewItem("Fanta Zero");
-                juoma.SubItems.Add(fantazeroTB.Text);
-                int kpl = Convert.ToInt32(fantazeroTB.Text);
-                double hinta = kpl * 2.00;
-                string kokohinta = hinta.ToString();
-                juoma.SubItems.Add(kokohinta);
-                listView1.Items.Add(juoma);
-
-            }
-            else
-            {
-                fantazeroTB.Text = "";
-            }
-            if (spriteCB.Checked == true)
-            {
-                ListViewItem juoma = new ListViewItem("Sprite");
-                juoma.SubItems.Add(spriteTB.Text);
-                int kpl = Convert.ToInt32(spriteTB.Text);
-                double hinta = kpl * 2.00;
-                string kokohinta = hinta.ToString();
-                juoma.SubItems.Add(kokohinta);
-                listView1.Items.Add(juoma);
-
-            }
-            else
-            {
-                spriteTB.Text = "";
-            }
-            if (spritezeroCB.Checked == true)
-            {
-                ListViewItem juoma = new ListViewItem("Sprite Zero");
-                juoma.SubItems.Add(spritezeroTB.Text);
-                int kpl = Convert.ToInt32(spritezeroTB.Text);
-                double hinta = kpl * 2.00;
-                string kokohinta = hinta.ToString();
-                juoma.SubItems.Add(kokohinta);
-                listView1.Items.Add(juoma);
-
-            }
-            else
-            {
-                spritezeroTB.Text = "";
-            }
-            if (vichyCB.Checked == true)
-            {
-                ListViewItem juoma = new ListViewItem("Vichy");
-                juoma.SubItems.Add(vichyTB.Text);
-                int kpl = Convert.ToInt32(vichyTB.Text);
-                double hinta = kpl * 2.00;
-                string kokohinta = hinta.ToString();
-                juoma.SubItems.Add(kokohinta);
-                listView1.Items.Add(juoma);
-
-            }
-            else
-            {
-                vichyTB.Text = "";
+                MessageBox.Show("Valitse ainakin yksi juoma", "Juoma", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             //Lisukkeiden valinta
-            if(hotwingsCB.Checked == true)
+            if (hotwingsCB.Checked == true)
             {
-                ListViewItem lisuke = new ListViewItem("Hot Wings");
-                lisuke.SubItems.Add("");
-                lisuke.SubItems.Add("2,50");
-                listView1.Items.Add(lisuke);
+                ListViewItem tuote = new ListViewItem("Hot Wings");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("2,50");
+                listView1.Items.Add(tuote);
             }
             if (sipulirenkaatCB.Checked == true)
             {
-                ListViewItem lisuke = new ListViewItem("Sipulirenkaat");
-                lisuke.SubItems.Add("");
-                lisuke.SubItems.Add("2,50");
-                listView1.Items.Add(lisuke);
+                ListViewItem tuote = new ListViewItem("Sipulirenkaat");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("2,50");
+                listView1.Items.Add(tuote);
             }
             if (ranskalaisetCB.Checked == true)
             {
-                ListViewItem lisuke = new ListViewItem("Ranskalaiset");
-                lisuke.SubItems.Add("");
-                lisuke.SubItems.Add("2,50");
-                listView1.Items.Add(lisuke);
+                ListViewItem tuote = new ListViewItem("Ranskalaiset");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("2,50");
+                listView1.Items.Add(tuote);
             }
             if(chiliranskalaisetCB.Checked == true)
             {
-                ListViewItem lisuke = new ListViewItem("Chili Ranskalaiset");
-                lisuke.SubItems.Add("");
-                lisuke.SubItems.Add("2,50");
-                listView1.Items.Add(lisuke);
+                ListViewItem tuote = new ListViewItem("Chili Ranskalaiset");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("2,50");
+                listView1.Items.Add(tuote);
             }
             if (yrttivoipatonkiCB.Checked == true)
             {
-                ListViewItem lisuke = new ListViewItem("Yrttivoi Patonki");
-                lisuke.SubItems.Add("");
-                lisuke.SubItems.Add("2,50");
-                listView1.Items.Add(lisuke);
+                ListViewItem tuote = new ListViewItem("Yrttivoi Patonki");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("2,50");
+                listView1.Items.Add(tuote);
             }
             if (valkosipulidippiCB.Checked == true)
             {
-                ListViewItem lisuke = new ListViewItem("Valkosipuli Dippi");
-                lisuke.SubItems.Add("");
-                lisuke.SubItems.Add("2,50");
-                listView1.Items.Add(lisuke);
+                ListViewItem tuote = new ListViewItem("Valkosipuli Dippi");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("2,50");
+                listView1.Items.Add(tuote);
             }
             if (bbqdippiCB.Checked == true)
             {
-                ListViewItem lisuke = new ListViewItem("BBQ Dippi");
-                lisuke.SubItems.Add("");
-                lisuke.SubItems.Add("2,50");
-                listView1.Items.Add(lisuke);
+                ListViewItem tuote = new ListViewItem("BBQ Dippi");
+                tuote.SubItems.Add("");
+                tuote.SubItems.Add("2,50");
+                listView1.Items.Add(tuote);
             }
+
+            /*
+             * 
+             *  Kokonaissumman ja veron laskeminen
+             *
+             */
+
+            double yhteensa = 0;
+            double vero = 0;
+            double kokonaishinta = 0;
+
+            foreach (ListViewItem tuote in listView1.Items)
+            {
+                yhteensa += Convert.ToDouble(tuote.SubItems[2].Text.Replace(",", "."));
+            }
+
+            vero = yhteensa * 0.14;
+            kokonaishinta = yhteensa + vero;
+
+            ilmanVeroaTB.Text = yhteensa.ToString("c2");
+            arvoLisaveroTB.Text = vero.ToString("c2");
+            kokonaisHintaTB.Text = kokonaishinta.ToString("c2");
+
+            tabcontrol.SelectTab("vahvistaTAB");
         }
 
+        // tyhjennä tilaus
 
+
+        private void tyhjennaTilausBT_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            ilmanVeroaTB.Text = "";
+            arvoLisaveroTB.Text = "";
+            kokonaisHintaTB.Text = "";
+
+        }
+
+        private void tyhjennaBT_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cocacolaCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cocacolaCB.Checked)
+            {
+                if (cocacolaTB.Text == "")
+                {
+                    cocacolaTB.Text = "1";
+                }
+            }
+        }
     }
 }

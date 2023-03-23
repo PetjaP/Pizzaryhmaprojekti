@@ -163,6 +163,7 @@
             this.tyhjennaBT.TabIndex = 6;
             this.tyhjennaBT.Text = "Tyhjennä";
             this.tyhjennaBT.UseVisualStyleBackColor = true;
+            this.tyhjennaBT.Click += new System.EventHandler(this.tyhjennaBT_Click);
             // 
             // tilaaBT
             // 
@@ -478,6 +479,7 @@
             this.cocacolaCB.TabIndex = 0;
             this.cocacolaCB.Text = "Coca-Cola";
             this.cocacolaCB.UseVisualStyleBackColor = true;
+            this.cocacolaCB.CheckedChanged += new System.EventHandler(this.cocacolaCB_CheckedChanged);
             // 
             // tayteGB
             // 
@@ -938,6 +940,7 @@
             this.tyhjennaTilausBT.TabIndex = 7;
             this.tyhjennaTilausBT.Text = "Tyhjennä tilaus";
             this.tyhjennaTilausBT.UseVisualStyleBackColor = true;
+            this.tyhjennaTilausBT.Click += new System.EventHandler(this.tyhjennaTilausBT_Click);
             // 
             // label5
             // 
@@ -972,6 +975,7 @@
             // kokonaisHintaTB
             // 
             this.kokonaisHintaTB.BackColor = System.Drawing.Color.OldLace;
+            this.kokonaisHintaTB.Enabled = false;
             this.kokonaisHintaTB.Location = new System.Drawing.Point(851, 213);
             this.kokonaisHintaTB.Name = "kokonaisHintaTB";
             this.kokonaisHintaTB.Size = new System.Drawing.Size(195, 29);
@@ -980,6 +984,7 @@
             // arvoLisaveroTB
             // 
             this.arvoLisaveroTB.BackColor = System.Drawing.Color.OldLace;
+            this.arvoLisaveroTB.Enabled = false;
             this.arvoLisaveroTB.Location = new System.Drawing.Point(851, 147);
             this.arvoLisaveroTB.Name = "arvoLisaveroTB";
             this.arvoLisaveroTB.Size = new System.Drawing.Size(195, 29);
@@ -988,6 +993,7 @@
             // ilmanVeroaTB
             // 
             this.ilmanVeroaTB.BackColor = System.Drawing.Color.OldLace;
+            this.ilmanVeroaTB.Enabled = false;
             this.ilmanVeroaTB.Location = new System.Drawing.Point(851, 78);
             this.ilmanVeroaTB.Name = "ilmanVeroaTB";
             this.ilmanVeroaTB.Size = new System.Drawing.Size(195, 29);
@@ -1065,6 +1071,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabcontrol.ResumeLayout(false);
             this.tilausTAB.ResumeLayout(false);
             this.lisukeGB.ResumeLayout(false);
