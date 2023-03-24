@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.AxHost;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Pizzatilaus
 {
@@ -22,6 +24,12 @@ namespace Pizzatilaus
         {
             vehnaRB.Checked = true;
             pieniRB.Checked = true;
+            lahetaTilausBT.Enabled= false;
+            maksuTapaCB.Items.Add("Käteinen");
+            maksuTapaCB.Items.Add("Kortti");
+            maksuTapaCB.Items.Add("Lounas-seteli");
+            maksuTapaCB.SelectedIndex = 0;
+
         }
 
         private void tilaaBT_Click(object sender, EventArgs e)
@@ -502,7 +510,7 @@ namespace Pizzatilaus
 
             foreach (ListViewItem tuote in listView1.Items)
             {
-                yhteensa += Convert.ToDouble(tuote.SubItems[2].Text.Replace(",", "."));
+                yhteensa += Convert.ToDouble(tuote.SubItems[2].Text);
             }
 
             vero = yhteensa * 0.14;
@@ -541,6 +549,10 @@ namespace Pizzatilaus
                     cocacolaTB.Text = "1";
                 }
             }
+            else if (cocacolaCB.Checked == false)
+            {
+                cocacolaTB.Text = "";
+            }
         }
 
         private void cocacolazeroCB_CheckedChanged(object sender, EventArgs e)
@@ -551,6 +563,10 @@ namespace Pizzatilaus
                 {
                     cocacolazeroTB.Text = "1";
                 }
+            }
+            else if (cocacolazeroCB.Checked == false)
+            {
+                cocacolazeroTB.Text = "";
             }
         }
 
@@ -563,6 +579,10 @@ namespace Pizzatilaus
                     drpepperTB.Text = "1";
                 }
             }
+            else if (drpepperCB.Checked == false)
+            {
+                drpepperTB.Text = "";
+            }
         }
 
         private void drpepperzeroCB_CheckedChanged(object sender, EventArgs e)
@@ -573,6 +593,10 @@ namespace Pizzatilaus
                 {
                     drpepperzeroTB.Text = "1";
                 }
+            }
+            else if (drpepperzeroCB.Checked == false)
+            {
+                drpepperzeroTB.Text = "";
             }
         }
 
@@ -585,6 +609,10 @@ namespace Pizzatilaus
                     fantaTB.Text = "1";
                 }
             }
+            else if (fantaCB.Checked == false)
+            {
+                fantaTB.Text = "";
+            }
         }
 
         private void fantazeroCB_CheckedChanged(object sender, EventArgs e)
@@ -595,6 +623,10 @@ namespace Pizzatilaus
                 {
                     fantazeroTB.Text = "1";
                 }
+            }
+            else if (fantazeroCB.Checked == false)
+            {
+                fantazeroTB.Text = "";
             }
         }
 
@@ -607,6 +639,10 @@ namespace Pizzatilaus
                     spriteTB.Text = "1";
                 }
             }
+            else if (spriteCB.Checked == false)
+            {
+                spriteTB.Text = "";
+            }
         }
 
         private void spritezeroCB_CheckedChanged(object sender, EventArgs e)
@@ -617,6 +653,10 @@ namespace Pizzatilaus
                 {
                     spritezeroTB.Text = "1";
                 }
+            }
+            else if (spritezeroCB.Checked == false)
+            {
+                spritezeroTB.Text = "";
             }
         }
 
@@ -629,7 +669,12 @@ namespace Pizzatilaus
                     vichyTB.Text = "1";
                 }
             }
+            else if (vichyCB.Checked == false)
+            {
+                vichyTB.Text = "";
+            }
         }
+        
 
         private void cocacolaTB_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -710,6 +755,78 @@ namespace Pizzatilaus
             {
                 e.Handled = true;
             }
+        }
+
+        private void siirryMaksuunBT_Click(object sender, EventArgs e)
+        {
+            loppuSummaTB.Text = kokonaisHintaTB.Text;
+            tabcontrol.SelectTab(2);
+            maksettuTB.Text = "0";
+
+        }
+
+        private void maksuTapaCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(maksuTapaCB.SelectedIndex == 0)
+            {
+                kortinNumeroTB.Enabled = false;
+            }
+            else
+            {
+                kortinNumeroTB.Enabled=true;
+            }
+        }
+
+        private void maksuBT_Click(object sender, EventArgs e)
+        {
+            char[] euro = { '€' };
+            double maksettu =Convert.ToDouble(maksettuTB.Text);
+            double kokosumma = Convert.ToDouble(loppuSummaTB.Text.TrimEnd(euro));
+            double vaihtoraha = 0;
+            if(maksettu < kokosumma)
+            {
+                MessageBox.Show("Maksa koko summa kiitos!", "Makseminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else if( etuNimiTB.Text == "" || sukuNimiTB.Text == "" || osoiteTB.Text == "" || pNumeroTB.Text == "" || maksettuTB.Text == "")
+            {
+                MessageBox.Show("Vaaditut tiedot puuttuvat!", "Tiedot", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                vaihtoraha = maksettu - kokosumma;
+                vaihtoRahaTB.Text = Convert.ToString(vaihtoraha.ToString("c2"));
+                lahetaTilausBT.Enabled= true;
+            }
+
+
+        }
+
+        private void lahetaTilausBT_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Kiitos tilauksestasi meiltä! Tilauksesi on matkalla ja saapuu noin 30 minuutissa. Haluatko tilata lisää?", "Kiitos!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialog == DialogResult.Yes)
+            {
+
+                //Clearing all data
+               
+
+                listView1.Items.Clear();
+                
+
+                tabcontrol.SelectTab(0);
+            }
+
+            else if (dialog == DialogResult.No)
+            {
+                this.Close();
+            }
+        }
+
+        private void poistuBT_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

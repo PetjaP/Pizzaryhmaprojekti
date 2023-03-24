@@ -128,11 +128,11 @@
             this.maakuntaCB = new System.Windows.Forms.ComboBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.pNumeroTB = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.osoiteTB = new System.Windows.Forms.TextBox();
+            this.sukuNimiTB = new System.Windows.Forms.TextBox();
+            this.etuNimiTB = new System.Windows.Forms.TextBox();
             this.sahkopostiLB = new System.Windows.Forms.Label();
             this.puhelinNumeroLB = new System.Windows.Forms.Label();
             this.postinumeroLB = new System.Windows.Forms.Label();
@@ -982,6 +982,7 @@
             this.siirryMaksuunBT.TabIndex = 8;
             this.siirryMaksuunBT.Text = "Siirry maksuun";
             this.siirryMaksuunBT.UseVisualStyleBackColor = true;
+            this.siirryMaksuunBT.Click += new System.EventHandler(this.siirryMaksuunBT_Click);
             // 
             // tyhjennaTilausBT
             // 
@@ -1104,6 +1105,7 @@
             this.poistuBT.TabIndex = 4;
             this.poistuBT.Text = "Poistu";
             this.poistuBT.UseVisualStyleBackColor = true;
+            this.poistuBT.Click += new System.EventHandler(this.poistuBT_Click);
             // 
             // lahetaTilausBT
             // 
@@ -1114,6 +1116,7 @@
             this.lahetaTilausBT.TabIndex = 3;
             this.lahetaTilausBT.Text = "Lähetä tilaus";
             this.lahetaTilausBT.UseVisualStyleBackColor = true;
+            this.lahetaTilausBT.Click += new System.EventHandler(this.lahetaTilausBT_Click);
             // 
             // maksuBT
             // 
@@ -1125,6 +1128,7 @@
             this.maksuBT.TabIndex = 2;
             this.maksuBT.Text = "Maksa";
             this.maksuBT.UseVisualStyleBackColor = true;
+            this.maksuBT.Click += new System.EventHandler(this.maksuBT_Click);
             // 
             // maksuGB
             // 
@@ -1149,6 +1153,8 @@
             // 
             // vaihtoRahaTB
             // 
+            this.vaihtoRahaTB.BackColor = System.Drawing.Color.OldLace;
+            this.vaihtoRahaTB.Enabled = false;
             this.vaihtoRahaTB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vaihtoRahaTB.Location = new System.Drawing.Point(192, 249);
             this.vaihtoRahaTB.Name = "vaihtoRahaTB";
@@ -1157,6 +1163,7 @@
             // 
             // maksettuTB
             // 
+            this.maksettuTB.BackColor = System.Drawing.Color.OldLace;
             this.maksettuTB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maksettuTB.Location = new System.Drawing.Point(192, 208);
             this.maksettuTB.Name = "maksettuTB";
@@ -1165,6 +1172,8 @@
             // 
             // loppuSummaTB
             // 
+            this.loppuSummaTB.BackColor = System.Drawing.Color.OldLace;
+            this.loppuSummaTB.Enabled = false;
             this.loppuSummaTB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loppuSummaTB.Location = new System.Drawing.Point(192, 167);
             this.loppuSummaTB.Name = "loppuSummaTB";
@@ -1183,15 +1192,11 @@
             // 
             this.maksuTapaCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maksuTapaCB.FormattingEnabled = true;
-            this.maksuTapaCB.Items.AddRange(new object[] {
-            "",
-            "Kortti",
-            "Käteinen",
-            "Lounas-seteli"});
             this.maksuTapaCB.Location = new System.Drawing.Point(192, 85);
             this.maksuTapaCB.Name = "maksuTapaCB";
             this.maksuTapaCB.Size = new System.Drawing.Size(359, 28);
             this.maksuTapaCB.TabIndex = 5;
+            this.maksuTapaCB.SelectedIndexChanged += new System.EventHandler(this.maksuTapaCB_SelectedIndexChanged);
             // 
             // vaihtorahaLB
             // 
@@ -1244,11 +1249,11 @@
             this.asiakasGB.Controls.Add(this.maakuntaCB);
             this.asiakasGB.Controls.Add(this.textBox7);
             this.asiakasGB.Controls.Add(this.textBox6);
-            this.asiakasGB.Controls.Add(this.textBox5);
+            this.asiakasGB.Controls.Add(this.pNumeroTB);
             this.asiakasGB.Controls.Add(this.textBox4);
-            this.asiakasGB.Controls.Add(this.textBox3);
-            this.asiakasGB.Controls.Add(this.textBox2);
-            this.asiakasGB.Controls.Add(this.textBox1);
+            this.asiakasGB.Controls.Add(this.osoiteTB);
+            this.asiakasGB.Controls.Add(this.sukuNimiTB);
+            this.asiakasGB.Controls.Add(this.etuNimiTB);
             this.asiakasGB.Controls.Add(this.sahkopostiLB);
             this.asiakasGB.Controls.Add(this.puhelinNumeroLB);
             this.asiakasGB.Controls.Add(this.postinumeroLB);
@@ -1312,13 +1317,13 @@
             this.textBox6.Size = new System.Drawing.Size(356, 28);
             this.textBox6.TabIndex = 14;
             // 
-            // textBox5
+            // pNumeroTB
             // 
-            this.textBox5.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(192, 294);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(356, 28);
-            this.textBox5.TabIndex = 13;
+            this.pNumeroTB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pNumeroTB.Location = new System.Drawing.Point(192, 294);
+            this.pNumeroTB.Name = "pNumeroTB";
+            this.pNumeroTB.Size = new System.Drawing.Size(356, 28);
+            this.pNumeroTB.TabIndex = 13;
             // 
             // textBox4
             // 
@@ -1328,29 +1333,29 @@
             this.textBox4.Size = new System.Drawing.Size(356, 28);
             this.textBox4.TabIndex = 12;
             // 
-            // textBox3
+            // osoiteTB
             // 
-            this.textBox3.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(192, 171);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(356, 28);
-            this.textBox3.TabIndex = 11;
+            this.osoiteTB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.osoiteTB.Location = new System.Drawing.Point(192, 171);
+            this.osoiteTB.Name = "osoiteTB";
+            this.osoiteTB.Size = new System.Drawing.Size(356, 28);
+            this.osoiteTB.TabIndex = 11;
             // 
-            // textBox2
+            // sukuNimiTB
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(192, 130);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(356, 28);
-            this.textBox2.TabIndex = 10;
+            this.sukuNimiTB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sukuNimiTB.Location = new System.Drawing.Point(192, 130);
+            this.sukuNimiTB.Name = "sukuNimiTB";
+            this.sukuNimiTB.Size = new System.Drawing.Size(356, 28);
+            this.sukuNimiTB.TabIndex = 10;
             // 
-            // textBox1
+            // etuNimiTB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(192, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(356, 28);
-            this.textBox1.TabIndex = 9;
+            this.etuNimiTB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etuNimiTB.Location = new System.Drawing.Point(192, 89);
+            this.etuNimiTB.Name = "etuNimiTB";
+            this.etuNimiTB.Size = new System.Drawing.Size(356, 28);
+            this.etuNimiTB.TabIndex = 9;
             // 
             // sahkopostiLB
             // 
@@ -1582,11 +1587,11 @@
         private System.Windows.Forms.GroupBox asiakasGB;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox pNumeroTB;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox osoiteTB;
+        private System.Windows.Forms.TextBox sukuNimiTB;
+        private System.Windows.Forms.TextBox etuNimiTB;
         private System.Windows.Forms.Label sahkopostiLB;
         private System.Windows.Forms.Label puhelinNumeroLB;
         private System.Windows.Forms.Label postinumeroLB;
