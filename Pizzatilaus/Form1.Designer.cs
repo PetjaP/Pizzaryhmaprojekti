@@ -110,8 +110,35 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.maksuTAB = new System.Windows.Forms.TabPage();
+            this.maksuGB = new System.Windows.Forms.GroupBox();
+            this.asiakasGB = new System.Windows.Forms.GroupBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.sahkopostiLB = new System.Windows.Forms.Label();
+            this.puhelinNumeroLB = new System.Windows.Forms.Label();
+            this.postinumeroLB = new System.Windows.Forms.Label();
+            this.paikkakuntaLB = new System.Windows.Forms.Label();
+            this.maakuntaLB = new System.Windows.Forms.Label();
+            this.osoiteLB = new System.Windows.Forms.Label();
+            this.sukunimiLB = new System.Windows.Forms.Label();
+            this.etunimiLB = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.maakuntaCB = new System.Windows.Forms.ComboBox();
+            this.maksutapaLB = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.loppuSummaLB = new System.Windows.Forms.Label();
+            this.maksettuLB = new System.Windows.Forms.Label();
+            this.vaihtorahaLB = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.tabcontrol.SuspendLayout();
             this.tilausTAB.SuspendLayout();
             this.lisukeGB.SuspendLayout();
@@ -120,6 +147,9 @@
             this.pohjaGB.SuspendLayout();
             this.kokoGB.SuspendLayout();
             this.vahvistaTAB.SuspendLayout();
+            this.maksuTAB.SuspendLayout();
+            this.maksuGB.SuspendLayout();
+            this.asiakasGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1038,6 +1068,8 @@
             // 
             // maksuTAB
             // 
+            this.maksuTAB.Controls.Add(this.maksuGB);
+            this.maksuTAB.Controls.Add(this.asiakasGB);
             this.maksuTAB.Location = new System.Drawing.Point(4, 33);
             this.maksuTAB.Name = "maksuTAB";
             this.maksuTAB.Padding = new System.Windows.Forms.Padding(3);
@@ -1045,6 +1077,191 @@
             this.maksuTAB.TabIndex = 2;
             this.maksuTAB.Text = "Maksu";
             this.maksuTAB.UseVisualStyleBackColor = true;
+            // 
+            // maksuGB
+            // 
+            this.maksuGB.BackColor = System.Drawing.Color.Wheat;
+            this.maksuGB.Controls.Add(this.textBox9);
+            this.maksuGB.Controls.Add(this.textBox8);
+            this.maksuGB.Controls.Add(this.comboBox1);
+            this.maksuGB.Controls.Add(this.vaihtorahaLB);
+            this.maksuGB.Controls.Add(this.maksettuLB);
+            this.maksuGB.Controls.Add(this.loppuSummaLB);
+            this.maksuGB.Controls.Add(this.label9);
+            this.maksuGB.Controls.Add(this.maksutapaLB);
+            this.maksuGB.Font = new System.Drawing.Font("Tempus Sans ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maksuGB.Location = new System.Drawing.Point(566, 6);
+            this.maksuGB.Name = "maksuGB";
+            this.maksuGB.Size = new System.Drawing.Size(557, 343);
+            this.maksuGB.TabIndex = 1;
+            this.maksuGB.TabStop = false;
+            this.maksuGB.Text = "Maksutiedot:";
+            // 
+            // asiakasGB
+            // 
+            this.asiakasGB.BackColor = System.Drawing.Color.Wheat;
+            this.asiakasGB.Controls.Add(this.maakuntaCB);
+            this.asiakasGB.Controls.Add(this.textBox7);
+            this.asiakasGB.Controls.Add(this.textBox6);
+            this.asiakasGB.Controls.Add(this.textBox5);
+            this.asiakasGB.Controls.Add(this.textBox4);
+            this.asiakasGB.Controls.Add(this.textBox3);
+            this.asiakasGB.Controls.Add(this.textBox2);
+            this.asiakasGB.Controls.Add(this.textBox1);
+            this.asiakasGB.Controls.Add(this.sahkopostiLB);
+            this.asiakasGB.Controls.Add(this.puhelinNumeroLB);
+            this.asiakasGB.Controls.Add(this.postinumeroLB);
+            this.asiakasGB.Controls.Add(this.paikkakuntaLB);
+            this.asiakasGB.Controls.Add(this.maakuntaLB);
+            this.asiakasGB.Controls.Add(this.osoiteLB);
+            this.asiakasGB.Controls.Add(this.sukunimiLB);
+            this.asiakasGB.Controls.Add(this.etunimiLB);
+            this.asiakasGB.Controls.Add(this.label7);
+            this.asiakasGB.Font = new System.Drawing.Font("Tempus Sans ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.asiakasGB.Location = new System.Drawing.Point(6, 6);
+            this.asiakasGB.Name = "asiakasGB";
+            this.asiakasGB.Size = new System.Drawing.Size(554, 458);
+            this.asiakasGB.TabIndex = 0;
+            this.asiakasGB.TabStop = false;
+            this.asiakasGB.Text = "Asiakastiedot:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(192, 376);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(356, 28);
+            this.textBox7.TabIndex = 15;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(192, 335);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(356, 28);
+            this.textBox6.TabIndex = 14;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(192, 294);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(356, 28);
+            this.textBox5.TabIndex = 13;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(192, 253);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(356, 28);
+            this.textBox4.TabIndex = 12;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(192, 171);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(356, 28);
+            this.textBox3.TabIndex = 11;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(192, 130);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(356, 28);
+            this.textBox2.TabIndex = 10;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(192, 89);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(356, 28);
+            this.textBox1.TabIndex = 9;
+            // 
+            // sahkopostiLB
+            // 
+            this.sahkopostiLB.AutoSize = true;
+            this.sahkopostiLB.Location = new System.Drawing.Point(6, 380);
+            this.sahkopostiLB.Name = "sahkopostiLB";
+            this.sahkopostiLB.Size = new System.Drawing.Size(112, 24);
+            this.sahkopostiLB.TabIndex = 8;
+            this.sahkopostiLB.Text = "Sähköposti:";
+            // 
+            // puhelinNumeroLB
+            // 
+            this.puhelinNumeroLB.AutoSize = true;
+            this.puhelinNumeroLB.Location = new System.Drawing.Point(6, 339);
+            this.puhelinNumeroLB.Name = "puhelinNumeroLB";
+            this.puhelinNumeroLB.Size = new System.Drawing.Size(165, 24);
+            this.puhelinNumeroLB.TabIndex = 7;
+            this.puhelinNumeroLB.Text = "Puhelin-numero:";
+            // 
+            // postinumeroLB
+            // 
+            this.postinumeroLB.AutoSize = true;
+            this.postinumeroLB.Location = new System.Drawing.Point(6, 298);
+            this.postinumeroLB.Name = "postinumeroLB";
+            this.postinumeroLB.Size = new System.Drawing.Size(138, 24);
+            this.postinumeroLB.TabIndex = 6;
+            this.postinumeroLB.Text = "*Postinumero:";
+            // 
+            // paikkakuntaLB
+            // 
+            this.paikkakuntaLB.AutoSize = true;
+            this.paikkakuntaLB.Location = new System.Drawing.Point(6, 257);
+            this.paikkakuntaLB.Name = "paikkakuntaLB";
+            this.paikkakuntaLB.Size = new System.Drawing.Size(125, 24);
+            this.paikkakuntaLB.TabIndex = 5;
+            this.paikkakuntaLB.Text = "Paikkakunta:";
+            // 
+            // maakuntaLB
+            // 
+            this.maakuntaLB.AutoSize = true;
+            this.maakuntaLB.Location = new System.Drawing.Point(6, 216);
+            this.maakuntaLB.Name = "maakuntaLB";
+            this.maakuntaLB.Size = new System.Drawing.Size(104, 24);
+            this.maakuntaLB.TabIndex = 4;
+            this.maakuntaLB.Text = "Maakunta:";
+            // 
+            // osoiteLB
+            // 
+            this.osoiteLB.AutoSize = true;
+            this.osoiteLB.Location = new System.Drawing.Point(6, 175);
+            this.osoiteLB.Name = "osoiteLB";
+            this.osoiteLB.Size = new System.Drawing.Size(76, 24);
+            this.osoiteLB.TabIndex = 3;
+            this.osoiteLB.Text = "*Osoite";
+            // 
+            // sukunimiLB
+            // 
+            this.sukunimiLB.AutoSize = true;
+            this.sukunimiLB.Location = new System.Drawing.Point(6, 134);
+            this.sukunimiLB.Name = "sukunimiLB";
+            this.sukunimiLB.Size = new System.Drawing.Size(102, 24);
+            this.sukunimiLB.TabIndex = 2;
+            this.sukunimiLB.Text = "*Sukunimi";
+            // 
+            // etunimiLB
+            // 
+            this.etunimiLB.AutoSize = true;
+            this.etunimiLB.Location = new System.Drawing.Point(6, 93);
+            this.etunimiLB.Name = "etunimiLB";
+            this.etunimiLB.Size = new System.Drawing.Size(95, 24);
+            this.etunimiLB.TabIndex = 1;
+            this.etunimiLB.Text = "*Etunimi:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(130, 47);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(326, 24);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "(*) Merkityt kentät ovat pakollisia!";
             // 
             // label1
             // 
@@ -1066,6 +1283,106 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // maakuntaCB
+            // 
+            this.maakuntaCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maakuntaCB.FormattingEnabled = true;
+            this.maakuntaCB.Items.AddRange(new object[] {
+            "",
+            "Uusimaa",
+            "Varsinais-Suomi",
+            "Satakunta",
+            "Kanta-Häme",
+            "Pirkanmaa",
+            "Päijät-Häme",
+            "Kymenlaakso",
+            "Etelä-Karjala",
+            "Etelä-Savo",
+            "Pohjois-Savo",
+            "Pohjois-Karjala",
+            "Keski-Suomi",
+            "Etelä-Pohjanmaa",
+            "Pohjanmaa",
+            "Keski-Pohjanmaa",
+            "Pohjois-Pohjanmaa",
+            "Kainuu",
+            "Lappi",
+            "Ahvenanmaa"});
+            this.maakuntaCB.Location = new System.Drawing.Point(192, 212);
+            this.maakuntaCB.Name = "maakuntaCB";
+            this.maakuntaCB.Size = new System.Drawing.Size(356, 28);
+            this.maakuntaCB.TabIndex = 16;
+            // 
+            // maksutapaLB
+            // 
+            this.maksutapaLB.AutoSize = true;
+            this.maksutapaLB.Location = new System.Drawing.Point(6, 89);
+            this.maksutapaLB.Name = "maksutapaLB";
+            this.maksutapaLB.Size = new System.Drawing.Size(117, 24);
+            this.maksutapaLB.TabIndex = 0;
+            this.maksutapaLB.Text = "*Maksutapa:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(152, 24);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Kortin numero:";
+            // 
+            // loppuSummaLB
+            // 
+            this.loppuSummaLB.AutoSize = true;
+            this.loppuSummaLB.Location = new System.Drawing.Point(6, 171);
+            this.loppuSummaLB.Name = "loppuSummaLB";
+            this.loppuSummaLB.Size = new System.Drawing.Size(134, 24);
+            this.loppuSummaLB.TabIndex = 2;
+            this.loppuSummaLB.Text = "Loppusumma:";
+            // 
+            // maksettuLB
+            // 
+            this.maksettuLB.AutoSize = true;
+            this.maksettuLB.Location = new System.Drawing.Point(6, 212);
+            this.maksettuLB.Name = "maksettuLB";
+            this.maksettuLB.Size = new System.Drawing.Size(99, 24);
+            this.maksettuLB.TabIndex = 3;
+            this.maksettuLB.Text = "Maksettu:";
+            // 
+            // vaihtorahaLB
+            // 
+            this.vaihtorahaLB.AutoSize = true;
+            this.vaihtorahaLB.Location = new System.Drawing.Point(6, 253);
+            this.vaihtorahaLB.Name = "vaihtorahaLB";
+            this.vaihtorahaLB.Size = new System.Drawing.Size(112, 24);
+            this.vaihtorahaLB.TabIndex = 4;
+            this.vaihtorahaLB.Text = "Vaihtoraha:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(192, 85);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(359, 28);
+            this.comboBox1.TabIndex = 5;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(192, 126);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(359, 28);
+            this.textBox8.TabIndex = 6;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(192, 167);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(359, 28);
+            this.textBox9.TabIndex = 7;
             // 
             // Form1
             // 
@@ -1094,6 +1411,11 @@
             this.kokoGB.PerformLayout();
             this.vahvistaTAB.ResumeLayout(false);
             this.vahvistaTAB.PerformLayout();
+            this.maksuTAB.ResumeLayout(false);
+            this.maksuGB.ResumeLayout(false);
+            this.maksuGB.PerformLayout();
+            this.asiakasGB.ResumeLayout(false);
+            this.asiakasGB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1185,6 +1507,33 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox maksuGB;
+        private System.Windows.Forms.GroupBox asiakasGB;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label sahkopostiLB;
+        private System.Windows.Forms.Label puhelinNumeroLB;
+        private System.Windows.Forms.Label postinumeroLB;
+        private System.Windows.Forms.Label paikkakuntaLB;
+        private System.Windows.Forms.Label maakuntaLB;
+        private System.Windows.Forms.Label osoiteLB;
+        private System.Windows.Forms.Label sukunimiLB;
+        private System.Windows.Forms.Label etunimiLB;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label vaihtorahaLB;
+        private System.Windows.Forms.Label maksettuLB;
+        private System.Windows.Forms.Label loppuSummaLB;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label maksutapaLB;
+        private System.Windows.Forms.ComboBox maakuntaCB;
     }
 }
 
