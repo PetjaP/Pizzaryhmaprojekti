@@ -110,8 +110,22 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.maksuTAB = new System.Windows.Forms.TabPage();
+            this.poistuBT = new System.Windows.Forms.Button();
+            this.lahetaTilausBT = new System.Windows.Forms.Button();
+            this.maksuBT = new System.Windows.Forms.Button();
             this.maksuGB = new System.Windows.Forms.GroupBox();
+            this.vaihtoRahaTB = new System.Windows.Forms.TextBox();
+            this.maksettuTB = new System.Windows.Forms.TextBox();
+            this.loppuSummaTB = new System.Windows.Forms.TextBox();
+            this.kortinNumeroTB = new System.Windows.Forms.TextBox();
+            this.maksuTapaCB = new System.Windows.Forms.ComboBox();
+            this.vaihtorahaLB = new System.Windows.Forms.Label();
+            this.maksettuLB = new System.Windows.Forms.Label();
+            this.loppuSummaLB = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.maksutapaLB = new System.Windows.Forms.Label();
             this.asiakasGB = new System.Windows.Forms.GroupBox();
+            this.maakuntaCB = new System.Windows.Forms.ComboBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -130,15 +144,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.maakuntaCB = new System.Windows.Forms.ComboBox();
-            this.maksutapaLB = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.loppuSummaLB = new System.Windows.Forms.Label();
-            this.maksettuLB = new System.Windows.Forms.Label();
-            this.vaihtorahaLB = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.tabcontrol.SuspendLayout();
             this.tilausTAB.SuspendLayout();
             this.lisukeGB.SuspendLayout();
@@ -348,6 +353,7 @@
             this.vichyTB.Name = "vichyTB";
             this.vichyTB.Size = new System.Drawing.Size(49, 22);
             this.vichyTB.TabIndex = 18;
+            this.vichyTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.vichyTB_KeyPress);
             // 
             // spriteCB
             // 
@@ -368,6 +374,7 @@
             this.spritezeroTB.Name = "spritezeroTB";
             this.spritezeroTB.Size = new System.Drawing.Size(49, 22);
             this.spritezeroTB.TabIndex = 17;
+            this.spritezeroTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spritezeroTB_KeyPress);
             // 
             // spriteTB
             // 
@@ -376,6 +383,7 @@
             this.spriteTB.Name = "spriteTB";
             this.spriteTB.Size = new System.Drawing.Size(49, 22);
             this.spriteTB.TabIndex = 16;
+            this.spriteTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spriteTB_KeyPress);
             // 
             // fantazeroTB
             // 
@@ -384,6 +392,7 @@
             this.fantazeroTB.Name = "fantazeroTB";
             this.fantazeroTB.Size = new System.Drawing.Size(49, 22);
             this.fantazeroTB.TabIndex = 15;
+            this.fantazeroTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fantazeroTB_KeyPress);
             // 
             // fantaTB
             // 
@@ -392,6 +401,7 @@
             this.fantaTB.Name = "fantaTB";
             this.fantaTB.Size = new System.Drawing.Size(49, 22);
             this.fantaTB.TabIndex = 14;
+            this.fantaTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fantaTB_KeyPress);
             // 
             // drpepperzeroTB
             // 
@@ -400,6 +410,7 @@
             this.drpepperzeroTB.Name = "drpepperzeroTB";
             this.drpepperzeroTB.Size = new System.Drawing.Size(49, 22);
             this.drpepperzeroTB.TabIndex = 13;
+            this.drpepperzeroTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.drpepperzeroTB_KeyPress);
             // 
             // drpepperTB
             // 
@@ -408,6 +419,7 @@
             this.drpepperTB.Name = "drpepperTB";
             this.drpepperTB.Size = new System.Drawing.Size(49, 22);
             this.drpepperTB.TabIndex = 12;
+            this.drpepperTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.drpepperTB_KeyPress);
             // 
             // cocacolazeroTB
             // 
@@ -416,6 +428,7 @@
             this.cocacolazeroTB.Name = "cocacolazeroTB";
             this.cocacolazeroTB.Size = new System.Drawing.Size(49, 22);
             this.cocacolazeroTB.TabIndex = 11;
+            this.cocacolazeroTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cocacolazeroTB_KeyPress);
             // 
             // cocacolaTB
             // 
@@ -424,6 +437,7 @@
             this.cocacolaTB.Name = "cocacolaTB";
             this.cocacolaTB.Size = new System.Drawing.Size(49, 22);
             this.cocacolaTB.TabIndex = 10;
+            this.cocacolaTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cocacolaTB_KeyPress);
             // 
             // label2
             // 
@@ -1068,6 +1082,9 @@
             // 
             // maksuTAB
             // 
+            this.maksuTAB.Controls.Add(this.poistuBT);
+            this.maksuTAB.Controls.Add(this.lahetaTilausBT);
+            this.maksuTAB.Controls.Add(this.maksuBT);
             this.maksuTAB.Controls.Add(this.maksuGB);
             this.maksuTAB.Controls.Add(this.asiakasGB);
             this.maksuTAB.Location = new System.Drawing.Point(4, 33);
@@ -1078,12 +1095,45 @@
             this.maksuTAB.Text = "Maksu";
             this.maksuTAB.UseVisualStyleBackColor = true;
             // 
+            // poistuBT
+            // 
+            this.poistuBT.Font = new System.Drawing.Font("Tempus Sans ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.poistuBT.Location = new System.Drawing.Point(944, 355);
+            this.poistuBT.Name = "poistuBT";
+            this.poistuBT.Size = new System.Drawing.Size(179, 54);
+            this.poistuBT.TabIndex = 4;
+            this.poistuBT.Text = "Poistu";
+            this.poistuBT.UseVisualStyleBackColor = true;
+            // 
+            // lahetaTilausBT
+            // 
+            this.lahetaTilausBT.Font = new System.Drawing.Font("Tempus Sans ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lahetaTilausBT.Location = new System.Drawing.Point(755, 355);
+            this.lahetaTilausBT.Name = "lahetaTilausBT";
+            this.lahetaTilausBT.Size = new System.Drawing.Size(179, 54);
+            this.lahetaTilausBT.TabIndex = 3;
+            this.lahetaTilausBT.Text = "Lähetä tilaus";
+            this.lahetaTilausBT.UseVisualStyleBackColor = true;
+            // 
+            // maksuBT
+            // 
+            this.maksuBT.Font = new System.Drawing.Font("Tempus Sans ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maksuBT.ForeColor = System.Drawing.Color.Green;
+            this.maksuBT.Location = new System.Drawing.Point(566, 356);
+            this.maksuBT.Name = "maksuBT";
+            this.maksuBT.Size = new System.Drawing.Size(179, 54);
+            this.maksuBT.TabIndex = 2;
+            this.maksuBT.Text = "Maksa";
+            this.maksuBT.UseVisualStyleBackColor = true;
+            // 
             // maksuGB
             // 
             this.maksuGB.BackColor = System.Drawing.Color.Wheat;
-            this.maksuGB.Controls.Add(this.textBox9);
-            this.maksuGB.Controls.Add(this.textBox8);
-            this.maksuGB.Controls.Add(this.comboBox1);
+            this.maksuGB.Controls.Add(this.vaihtoRahaTB);
+            this.maksuGB.Controls.Add(this.maksettuTB);
+            this.maksuGB.Controls.Add(this.loppuSummaTB);
+            this.maksuGB.Controls.Add(this.kortinNumeroTB);
+            this.maksuGB.Controls.Add(this.maksuTapaCB);
             this.maksuGB.Controls.Add(this.vaihtorahaLB);
             this.maksuGB.Controls.Add(this.maksettuLB);
             this.maksuGB.Controls.Add(this.loppuSummaLB);
@@ -1096,6 +1146,97 @@
             this.maksuGB.TabIndex = 1;
             this.maksuGB.TabStop = false;
             this.maksuGB.Text = "Maksutiedot:";
+            // 
+            // vaihtoRahaTB
+            // 
+            this.vaihtoRahaTB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vaihtoRahaTB.Location = new System.Drawing.Point(192, 249);
+            this.vaihtoRahaTB.Name = "vaihtoRahaTB";
+            this.vaihtoRahaTB.Size = new System.Drawing.Size(359, 28);
+            this.vaihtoRahaTB.TabIndex = 9;
+            // 
+            // maksettuTB
+            // 
+            this.maksettuTB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maksettuTB.Location = new System.Drawing.Point(192, 208);
+            this.maksettuTB.Name = "maksettuTB";
+            this.maksettuTB.Size = new System.Drawing.Size(359, 28);
+            this.maksettuTB.TabIndex = 8;
+            // 
+            // loppuSummaTB
+            // 
+            this.loppuSummaTB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loppuSummaTB.Location = new System.Drawing.Point(192, 167);
+            this.loppuSummaTB.Name = "loppuSummaTB";
+            this.loppuSummaTB.Size = new System.Drawing.Size(359, 28);
+            this.loppuSummaTB.TabIndex = 7;
+            // 
+            // kortinNumeroTB
+            // 
+            this.kortinNumeroTB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kortinNumeroTB.Location = new System.Drawing.Point(192, 126);
+            this.kortinNumeroTB.Name = "kortinNumeroTB";
+            this.kortinNumeroTB.Size = new System.Drawing.Size(359, 28);
+            this.kortinNumeroTB.TabIndex = 6;
+            // 
+            // maksuTapaCB
+            // 
+            this.maksuTapaCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maksuTapaCB.FormattingEnabled = true;
+            this.maksuTapaCB.Items.AddRange(new object[] {
+            "",
+            "Kortti",
+            "Käteinen",
+            "Lounas-seteli"});
+            this.maksuTapaCB.Location = new System.Drawing.Point(192, 85);
+            this.maksuTapaCB.Name = "maksuTapaCB";
+            this.maksuTapaCB.Size = new System.Drawing.Size(359, 28);
+            this.maksuTapaCB.TabIndex = 5;
+            // 
+            // vaihtorahaLB
+            // 
+            this.vaihtorahaLB.AutoSize = true;
+            this.vaihtorahaLB.Location = new System.Drawing.Point(6, 253);
+            this.vaihtorahaLB.Name = "vaihtorahaLB";
+            this.vaihtorahaLB.Size = new System.Drawing.Size(112, 24);
+            this.vaihtorahaLB.TabIndex = 4;
+            this.vaihtorahaLB.Text = "Vaihtoraha:";
+            // 
+            // maksettuLB
+            // 
+            this.maksettuLB.AutoSize = true;
+            this.maksettuLB.Location = new System.Drawing.Point(6, 212);
+            this.maksettuLB.Name = "maksettuLB";
+            this.maksettuLB.Size = new System.Drawing.Size(99, 24);
+            this.maksettuLB.TabIndex = 3;
+            this.maksettuLB.Text = "Maksettu:";
+            // 
+            // loppuSummaLB
+            // 
+            this.loppuSummaLB.AutoSize = true;
+            this.loppuSummaLB.Location = new System.Drawing.Point(6, 171);
+            this.loppuSummaLB.Name = "loppuSummaLB";
+            this.loppuSummaLB.Size = new System.Drawing.Size(134, 24);
+            this.loppuSummaLB.TabIndex = 2;
+            this.loppuSummaLB.Text = "Loppusumma:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(152, 24);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Kortin numero:";
+            // 
+            // maksutapaLB
+            // 
+            this.maksutapaLB.AutoSize = true;
+            this.maksutapaLB.Location = new System.Drawing.Point(6, 89);
+            this.maksutapaLB.Name = "maksutapaLB";
+            this.maksutapaLB.Size = new System.Drawing.Size(117, 24);
+            this.maksutapaLB.TabIndex = 0;
+            this.maksutapaLB.Text = "*Maksutapa:";
             // 
             // asiakasGB
             // 
@@ -1124,6 +1265,36 @@
             this.asiakasGB.TabIndex = 0;
             this.asiakasGB.TabStop = false;
             this.asiakasGB.Text = "Asiakastiedot:";
+            // 
+            // maakuntaCB
+            // 
+            this.maakuntaCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maakuntaCB.FormattingEnabled = true;
+            this.maakuntaCB.Items.AddRange(new object[] {
+            "",
+            "Uusimaa",
+            "Varsinais-Suomi",
+            "Satakunta",
+            "Kanta-Häme",
+            "Pirkanmaa",
+            "Päijät-Häme",
+            "Kymenlaakso",
+            "Etelä-Karjala",
+            "Etelä-Savo",
+            "Pohjois-Savo",
+            "Pohjois-Karjala",
+            "Keski-Suomi",
+            "Etelä-Pohjanmaa",
+            "Pohjanmaa",
+            "Keski-Pohjanmaa",
+            "Pohjois-Pohjanmaa",
+            "Kainuu",
+            "Lappi",
+            "Ahvenanmaa"});
+            this.maakuntaCB.Location = new System.Drawing.Point(192, 212);
+            this.maakuntaCB.Name = "maakuntaCB";
+            this.maakuntaCB.Size = new System.Drawing.Size(356, 28);
+            this.maakuntaCB.TabIndex = 16;
             // 
             // textBox7
             // 
@@ -1257,7 +1428,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(130, 47);
+            this.label7.Location = new System.Drawing.Point(124, 37);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(326, 24);
             this.label7.TabIndex = 0;
@@ -1283,106 +1454,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // maakuntaCB
-            // 
-            this.maakuntaCB.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maakuntaCB.FormattingEnabled = true;
-            this.maakuntaCB.Items.AddRange(new object[] {
-            "",
-            "Uusimaa",
-            "Varsinais-Suomi",
-            "Satakunta",
-            "Kanta-Häme",
-            "Pirkanmaa",
-            "Päijät-Häme",
-            "Kymenlaakso",
-            "Etelä-Karjala",
-            "Etelä-Savo",
-            "Pohjois-Savo",
-            "Pohjois-Karjala",
-            "Keski-Suomi",
-            "Etelä-Pohjanmaa",
-            "Pohjanmaa",
-            "Keski-Pohjanmaa",
-            "Pohjois-Pohjanmaa",
-            "Kainuu",
-            "Lappi",
-            "Ahvenanmaa"});
-            this.maakuntaCB.Location = new System.Drawing.Point(192, 212);
-            this.maakuntaCB.Name = "maakuntaCB";
-            this.maakuntaCB.Size = new System.Drawing.Size(356, 28);
-            this.maakuntaCB.TabIndex = 16;
-            // 
-            // maksutapaLB
-            // 
-            this.maksutapaLB.AutoSize = true;
-            this.maksutapaLB.Location = new System.Drawing.Point(6, 89);
-            this.maksutapaLB.Name = "maksutapaLB";
-            this.maksutapaLB.Size = new System.Drawing.Size(117, 24);
-            this.maksutapaLB.TabIndex = 0;
-            this.maksutapaLB.Text = "*Maksutapa:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 24);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Kortin numero:";
-            // 
-            // loppuSummaLB
-            // 
-            this.loppuSummaLB.AutoSize = true;
-            this.loppuSummaLB.Location = new System.Drawing.Point(6, 171);
-            this.loppuSummaLB.Name = "loppuSummaLB";
-            this.loppuSummaLB.Size = new System.Drawing.Size(134, 24);
-            this.loppuSummaLB.TabIndex = 2;
-            this.loppuSummaLB.Text = "Loppusumma:";
-            // 
-            // maksettuLB
-            // 
-            this.maksettuLB.AutoSize = true;
-            this.maksettuLB.Location = new System.Drawing.Point(6, 212);
-            this.maksettuLB.Name = "maksettuLB";
-            this.maksettuLB.Size = new System.Drawing.Size(99, 24);
-            this.maksettuLB.TabIndex = 3;
-            this.maksettuLB.Text = "Maksettu:";
-            // 
-            // vaihtorahaLB
-            // 
-            this.vaihtorahaLB.AutoSize = true;
-            this.vaihtorahaLB.Location = new System.Drawing.Point(6, 253);
-            this.vaihtorahaLB.Name = "vaihtorahaLB";
-            this.vaihtorahaLB.Size = new System.Drawing.Size(112, 24);
-            this.vaihtorahaLB.TabIndex = 4;
-            this.vaihtorahaLB.Text = "Vaihtoraha:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(192, 85);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(359, 28);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(192, 126);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(359, 28);
-            this.textBox8.TabIndex = 6;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(192, 167);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(359, 28);
-            this.textBox9.TabIndex = 7;
             // 
             // Form1
             // 
@@ -1525,15 +1596,20 @@
         private System.Windows.Forms.Label sukunimiLB;
         private System.Windows.Forms.Label etunimiLB;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox loppuSummaTB;
+        private System.Windows.Forms.TextBox kortinNumeroTB;
+        private System.Windows.Forms.ComboBox maksuTapaCB;
         private System.Windows.Forms.Label vaihtorahaLB;
         private System.Windows.Forms.Label maksettuLB;
         private System.Windows.Forms.Label loppuSummaLB;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label maksutapaLB;
         private System.Windows.Forms.ComboBox maakuntaCB;
+        private System.Windows.Forms.TextBox vaihtoRahaTB;
+        private System.Windows.Forms.TextBox maksettuTB;
+        private System.Windows.Forms.Button poistuBT;
+        private System.Windows.Forms.Button lahetaTilausBT;
+        private System.Windows.Forms.Button maksuBT;
     }
 }
 

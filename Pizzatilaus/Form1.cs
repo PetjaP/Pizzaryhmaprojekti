@@ -631,6 +631,85 @@ namespace Pizzatilaus
             }
         }
 
-        
+        private void cocacolaTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char q = e.KeyChar;
+            if (!Char.IsDigit(q) && q != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cocacolazeroTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char q = e.KeyChar;
+            if (!Char.IsDigit(q) && q != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void drpepperTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char q = e.KeyChar;
+            if (!Char.IsDigit(q) && q != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void drpepperzeroTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char q = e.KeyChar;
+            if (!Char.IsDigit(q) && q != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void fantaTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char q = e.KeyChar;
+            if (!Char.IsDigit(q) && q != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void fantazeroTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char q = e.KeyChar;
+            if (!Char.IsDigit(q) && q != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void spriteTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char q = e.KeyChar;
+            if (!Char.IsDigit(q) && q != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void spritezeroTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char q = e.KeyChar;
+            if (!Char.IsDigit(q) && q != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void vichyTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char q = e.KeyChar;
+            if (!Char.IsDigit(q) && q != 8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
