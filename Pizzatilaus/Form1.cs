@@ -536,7 +536,7 @@ namespace Pizzatilaus
 
         }
 
-        private void tyhjennaBT_Click(object sender, EventArgs e)
+        private void tyhjennaBT_Click(object sender, EventArgs e)// Tilaus-sivun tyhjennys
         {
             this.Controls.Clear();
             this.InitializeComponent();
