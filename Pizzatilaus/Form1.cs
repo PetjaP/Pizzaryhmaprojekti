@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.AxHost;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Pizzatilaus
 {
@@ -537,7 +538,10 @@ namespace Pizzatilaus
 
         private void tyhjennaBT_Click(object sender, EventArgs e)
         {
-           
+            this.Controls.Clear();
+            this.InitializeComponent();
+
+
         }
 
         private void cocacolaCB_CheckedChanged(object sender, EventArgs e)
