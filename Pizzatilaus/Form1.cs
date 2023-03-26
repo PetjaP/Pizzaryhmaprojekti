@@ -820,6 +820,9 @@ namespace Pizzatilaus
                 
 
                 tabcontrol.SelectTab(0);
+
+                this.Controls.Clear();
+                this.InitializeComponent();
             }
 
             else if (dialog == DialogResult.No)
