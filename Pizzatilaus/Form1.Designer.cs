@@ -1187,6 +1187,7 @@
             this.kortinNumeroTB.Name = "kortinNumeroTB";
             this.kortinNumeroTB.Size = new System.Drawing.Size(359, 28);
             this.kortinNumeroTB.TabIndex = 6;
+            this.kortinNumeroTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kortinNumeroTB_KeyPress);
             // 
             // maksuTapaCB
             // 
@@ -1324,6 +1325,7 @@
             this.pNumeroTB.Name = "pNumeroTB";
             this.pNumeroTB.Size = new System.Drawing.Size(356, 28);
             this.pNumeroTB.TabIndex = 13;
+            this.pNumeroTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pNumeroTB_KeyPress);
             // 
             // textBox4
             // 
