@@ -21,7 +21,7 @@ namespace Pizzatilaus
         {
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             vehnaRB.Checked = true;
             pieniRB.Checked = true;
@@ -29,7 +29,7 @@ namespace Pizzatilaus
             maksuTapaCB.Items.Add("Käteinen");
             maksuTapaCB.Items.Add("Kortti");
             maksuTapaCB.Items.Add("Lounas-seteli");
-            maksuTapaCB.SelectedIndex = 0;
+            maksuTapaCB.SelectedIndex = 1;
 
         }
 
@@ -540,6 +540,8 @@ namespace Pizzatilaus
         {
             this.Controls.Clear();
             this.InitializeComponent();
+            Form1_Load(sender, e);
+
 
 
         }
@@ -771,13 +773,23 @@ namespace Pizzatilaus
 
         private void maksuTapaCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(maksuTapaCB.SelectedIndex == 0)
+            if(maksuTapaCB.SelectedIndex == 0 || maksuTapaCB.SelectedIndex == 2)
             {
                 kortinNumeroTB.Enabled = false;
             }
             else
             {
                 kortinNumeroTB.Enabled=true;
+            }
+
+            if(maksuTapaCB.SelectedIndex == 0 || maksuTapaCB.SelectedIndex == 2)
+
+            {
+                lahetaTilausBT.Enabled = true;
+            }
+            else
+            {
+                lahetaTilausBT.Enabled = false;
             }
         }
 
@@ -820,9 +832,9 @@ namespace Pizzatilaus
                 
 
                 tabcontrol.SelectTab(0);
+                tyhjennaBT_Click(sender, e);
 
-                this.Controls.Clear();
-                this.InitializeComponent();
+
             }
 
             else if (dialog == DialogResult.No)
